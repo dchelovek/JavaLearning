@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+enter name: <input type="text" id="inputdisplay" size="25"/>
+<button type="button" onclick=" sendMsgToServer()">send: </button><br/>
+received reply: <input type="text" id="textdisplay" size="30"/><br/>
+Log: <textarea id="textlog" cols="45" rows="4"></textarea>
+<script type="text/javascript">
+	var xmlHttpRequest;
+	if(window.XMLHttpRequest){
+		xmlHttpRequest = new XMLHttpRequest(); 
+	}else if(window.ActiveXObject){
+		xmlHttpRequest = new ActiveXObject("MICROSOFT.XMLHTTP");
+	}
+
+	function sendMsgToServer(){
+		xmlHttpRequest.open("POST","/AJAXDemo/AjaxDemoServlet?name=" + document.getElementById('inputdisplay').value, true);
+		xmlHttpRequest.onreadystatechange=receiveMsgFromServer;
+		xmlHttpRequest.send();
+		document.getElementById('inputdisplay').value="";
+	}
+
+	function receiveMsgFromServer(){
+        var xmlTag = xmlHttpRequest.responseXML.getElementsByTagName("responseFromServer")[0].innerHTML;
+		if(xmlHttpRequest.readyState==4 && xmlHttpRequest.status==200){
+			document.getElementById('textdisplay').value = xmlTag;
+		}
+		document.getElementById('textlog').value = 'error: State is ' + xmlHttpRequest.readyState.toString() + '; Status is ' +xmlHttpRequest.status.toString();
+		document.getElementById('textlog').value+= "\n" + xmlTag;
+			
+	}
+</script>
+</body>
+</html>

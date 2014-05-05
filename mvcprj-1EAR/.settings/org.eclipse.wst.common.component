@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="mvcprj-1EAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="mvcprj-1.war" deploy-path="/" handle="module:/resource/mvcprj-1/mvcprj-1">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="JSPFilterPrj01.war" deploy-path="/" handle="module:/resource/JSPFilterPrj01/JSPFilterPrj01">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jspScopesPrj.war" deploy-path="/" handle="module:/resource/jspScopesPrj/jspScopesPrj">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DemoServletPrj.war" deploy-path="/" handle="module:/resource/DemoServletPrj/DemoServletPrj">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="AJAXDemo.war" deploy-path="/" handle="module:/resource/AJAXDemo/AJAXDemo">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ServletScopePrj01.war" deploy-path="/" handle="module:/resource/ServletScopePrj01/ServletScopePrj01">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ServletScopePrj02.war" deploy-path="/" handle="module:/resource/ServletScopePrj02/ServletScopePrj02">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="CommandWebPrj.war" deploy-path="/" handle="module:/resource/CommandWebPrj/CommandWebPrj">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

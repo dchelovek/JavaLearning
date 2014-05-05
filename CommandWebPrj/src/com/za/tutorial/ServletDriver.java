@@ -23,7 +23,7 @@ public class ServletDriver extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(true);
-		CommandMgr mgr = null;
+		CommandMgr mgr =  null;
 		CommandInvoker inv = null;
 		
 		if(session.getAttribute("invoker")==null){

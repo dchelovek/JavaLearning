@@ -6,17 +6,17 @@ public class CommandMgr {
 
 	private LinkedList<Command> commandHistory = new LinkedList<Command>();
 	public void open(Command command){
-		System.out.println("Running open command");
+		System.out.println("Running open command...");
 		recordHistory(command);
 	}
 	
 	public void close(Command command){
-		System.out.println("Running close command");
+		System.out.println("Running close command...");
 		recordHistory(command);
 	}
 	
 	public void save(Command command){
-		System.out.println("Running save command");
+		System.out.println("Running save command....");
 		recordHistory(command);
 	}
 	

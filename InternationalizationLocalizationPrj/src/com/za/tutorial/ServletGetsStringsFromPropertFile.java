@@ -10,23 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ILServlet")
-public class ILServlet extends HttpServlet {
+@WebServlet("/ServletGetsStringsFromPropertFile")
+public class ServletGetsStringsFromPropertFile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ResourceBundle resourceBundle = ResourceBundle.getBundle("com.za.tutorial.i18n.DemoBundle", request.getLocale());
+		ResourceBundle resourceBundle = ResourceBundle.getBundle("i18n.DemoBundle", request.getLocale());
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		
-//		Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-//		String errorMessage = (String) request.getAttribute("javax.servlet.error.message");
-//		String request_URI = (String) request.getAttribute("javax.servlet.error.request_uri");
-//		String servletName = (String)request.getAttribute("javax.servlet.error.servlet_name");
-//		Throwable errorException = (Throwable)request.getAttribute("javax.servlet.error.exception");
-//		Class<?> exceptionType = (Class<?>)request.getAttribute("javax.servlet.error.exception_type");
 		
 		pw.println("<html>");
-		pw.println("<head><title>Handle Errors</title></head>");
+		pw.println("<head><title>Internationalization & Localization</title></head>");
 		pw.println("<body>");
 		pw.println(resourceBundle.getString("SIGN_IN"));
 		pw.print("<img src=\"");
@@ -44,13 +38,6 @@ public class ILServlet extends HttpServlet {
 		pw.println("<br>");
 		pw.println("<input type=\"submit\" name=\"action\" value=\""+resourceBundle.getString("SIGN_IN")+"\">");
 
-
-//		pw.println("status code: "+ statusCode + "<br>");
-//		pw.println("error message: "+ errorMessage + "<br>");
-//		pw.println("request uri: " +request_URI + "<br>");
-//		pw.println("servlet: " +servletName + "<br>");
-//		pw.println("exception: " +errorException.getMessage() + "<br>");
-//		pw.println("exception type: " +exceptionType.toString() + "<br>");
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();

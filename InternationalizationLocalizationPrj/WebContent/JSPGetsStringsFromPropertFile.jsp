@@ -9,6 +9,8 @@
 <body>
 <% ResourceBundle resBundle = ResourceBundle.getBundle("i18n.DemoBundle", request.getLocale()); %>
 <%=resBundle.getString("SIGN_IN") %><br>
+<img src="<%= resBundle.getString("FLAG")%>" width="22" height="14">
+
 <%=resBundle.getString("USERNAME") %><br>
 <%=resBundle.getString("PASSWORD") %><br>
 

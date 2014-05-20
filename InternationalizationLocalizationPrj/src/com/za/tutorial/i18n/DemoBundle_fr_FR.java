@@ -4,10 +4,13 @@ import java.util.ListResourceBundle;
 
 public class DemoBundle_fr_FR extends ListResourceBundle {
 
-	@Override
-	protected Object[][] getContents() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	static final Object[][] contents = {{"SIGN_IN", "Se connecter"},
+										{"USERNAME","Nom d'utilisateur"},
+										{"PASSWORD", "not de passe"},
+										{"FLAG", "i18n/flags/French_flag.png"}};
+		@Override
+		protected Object[][] getContents() {
+				return contents;
+		}
 
 }
